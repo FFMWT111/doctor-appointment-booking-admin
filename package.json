@@ -8,9 +8,10 @@
     "name": "A Strapi developer"
   },
   "scripts": {
-    "build": "set NODE_ENV=production & strapi build",
-    "develop": "set NODE_ENV=development & strapi develop",
-    "start": "set NODE_ENV=localhost & strapi start",
+    "build": "strapi build",
+    "build:win": "cross-env NODE_ENV=production npm run build",
+    "develop": "strapi develop",
+    "start": "strapi start",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -19,13 +20,13 @@
     "@strapi/plugin-users-permissions": "4.24.5",
     "@strapi/provider-upload-cloudinary": "^4.25.0",
     "@strapi/strapi": "4.24.5",
+    "cross-env": "^7.0.3",
     "mysql": "2.18.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
     "styled-components": "5.3.3"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
