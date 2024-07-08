@@ -894,7 +894,6 @@ export interface ApiDoctorDoctor extends Schema.CollectionType {
   attributes: {
     Name: Attribute.String & Attribute.Required;
     Address: Attribute.String & Attribute.Required;
-    About: Attribute.Blocks & Attribute.Required;
     Picture: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.Required;
     Patients: Attribute.String;
@@ -913,6 +912,7 @@ export interface ApiDoctorDoctor extends Schema.CollectionType {
       'manyToMany',
       'api::appointment.appointment'
     >;
+    About: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
